@@ -1,2 +1,23 @@
-# Iteration-Game
-ake integer N as input.  Run a Loop(0-indexing) and print according to given condition.  For each iteration take two (a,b) integers as input.  Condition:  If index i is even print the sum of two numbers. If index i is odd print the multiplication of two numbers. Input Format  Take integer N as input. For N iterations take two integers as input. Constraints  1&lt;=N&lt;=1000  1&lt;=a,b&lt;=1000  Output Format  N Line of integers as output.  Sample Input 0  7 12 54 58 96 71 23 105 683 64 46 95 37 48 73 Sample Output 0  66 5568 94 71715 110 3515 121
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int[]a=new int[n];
+        int[]b=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=s.nextInt();
+            b[i]=s.nextInt();
+            if(i%2==0){
+                System.out.println(a[i] +b[i]);
+            }
+            else{
+                System.out.println(a[i]*b[i]);
+            }
+        }
+    }
+}
